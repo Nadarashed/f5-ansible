@@ -6,11 +6,11 @@
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
-from ansible.module_utils.network.common.utils import validate_ip_address
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import validate_ip_address
 
 try:
     # Ansible 2.6 and later
-    from ansible.module_utils.network.common.utils import validate_ip_v6_address
+    from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import validate_ip_v6_address
 except ImportError:
     import socket
 
@@ -29,8 +29,8 @@ try:
     from library.module_utils.compat.ipaddress import ip_interface
     from library.module_utils.compat.ipaddress import ip_network
 except ImportError:
-    from ansible.module_utils.compat.ipaddress import ip_interface
-    from ansible.module_utils.compat.ipaddress import ip_network
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_interface
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_network
 
 
 def is_valid_ip(addr, type='all'):
