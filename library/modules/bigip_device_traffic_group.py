@@ -328,10 +328,14 @@ class ModuleParameters(Parameters):
 class Changes(Parameters):
     def to_return(self):
         result = {}
-        for returnable in self.returnables:
-            result[returnable] = getattr(self, returnable)
-        result = self._filter_params(result)
+        try:
+            for returnable in self.returnables:
+                result[returnable] = getattr(self, returnable)
+            result = self._filter_params(result)
+        except Exception:
+            raise
         return result
+
 
 
 class UsableChanges(Changes):

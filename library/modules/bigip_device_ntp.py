@@ -146,7 +146,7 @@ class Changes(Parameters):
                     result[returnable] = change
             result = self._filter_params(result)
         except Exception:
-            pass
+            raise
         return result
 
 

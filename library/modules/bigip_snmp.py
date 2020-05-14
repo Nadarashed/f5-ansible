@@ -141,7 +141,7 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import F5ModuleError
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import AnsibleF5Parameters
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import f5_argument_spec
-    from ansible.module_utils.compat.ipaddress import ip_network
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_network
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import is_valid_hostname
 
 

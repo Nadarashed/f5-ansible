@@ -7212,7 +7212,6 @@ import re
 import time
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.network.common.utils import to_netmask
 from ansible.module_utils.parsing.convert_bool import BOOLEANS_TRUE
 from ansible.module_utils.six import iteritems
 from ansible.module_utils.six import string_types
@@ -7242,8 +7241,8 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import flatten_boolean
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import transform_name
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.ipaddress import is_valid_ip
-    from ansible.module_utils.compat.ipaddress import ip_address
-    from ansible.module_utils.compat.ipaddress import ip_interface
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_address
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_interface
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.icontrol import modules_provisioned
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.icontrol import tmos_version
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.urls import parseStats

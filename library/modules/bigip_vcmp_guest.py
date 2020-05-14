@@ -249,7 +249,7 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import f5_argument_spec
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.urls import parseStats
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.ipaddress import is_valid_ip
-    from ansible.module_utils.compat.ipaddress import ip_interface
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_interface
 
 
 class Parameters(AnsibleF5Parameters):

@@ -158,9 +158,9 @@ class Parameters(AnsibleF5Parameters):
             for returnable in self.returnables:
                 result[returnable] = getattr(self, returnable)
             result = self._filter_params(result)
-            return result
         except Exception:
-            return result
+            raise
+        return result
 
     @property
     def peer_server(self):

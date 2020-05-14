@@ -411,7 +411,7 @@ from ansible.module_utils.urls import urlparse
 from ansible.module_utils.basic import AnsibleModule
 from ansible.module_utils.basic import env_fallback
 from ansible.module_utils.six import iteritems
-from ansible.module_utils.network.common.utils import remove_default_spec
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import remove_default_spec
 
 
 try:

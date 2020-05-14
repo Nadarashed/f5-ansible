@@ -266,9 +266,9 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.ipaddress import is_valid_ip
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.ipaddress import ipv6_netmask_to_cidr
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.compare import cmp_str_with_none
-    from ansible.module_utils.compat.ipaddress import ip_address
-    from ansible.module_utils.compat.ipaddress import ip_network
-    from ansible.module_utils.compat.ipaddress import ip_interface
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_address
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_network
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_interface
 
 
 class Parameters(AnsibleF5Parameters):

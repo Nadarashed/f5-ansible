@@ -188,8 +188,8 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import fq_name
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import f5_argument_spec
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import transform_name
-    from ansible.module_utils.compat.ipaddress import ip_address
-    from ansible.module_utils.compat.ipaddress import ip_interface
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_network
+    from ansible_collections.ansible.netcommon.plugins.module_utils.compat.ipaddress import ip_interface
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.ipaddress import is_valid_ip
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.ipaddress import is_valid_ip_interface
 
@@ -620,7 +620,7 @@ class Changes(Parameters):
                 result[returnable] = getattr(self, returnable)
             result = self._filter_params(result)
         except Exception:
-            pass
+            raise
         return result
 
 

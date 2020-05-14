@@ -331,8 +331,8 @@ except ImportError:
 import os
 import tempfile
 
-from ansible.module_utils.network.common.config import dumps
-from ansible.module_utils.network.common.utils import to_list
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.config import NetworkConfig, dumps
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import to_list
 from ansible.module_utils.basic import AnsibleModule
 
 try:
