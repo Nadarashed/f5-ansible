@@ -7,9 +7,13 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
-from test.units.compat import unittest
 
-from library.module_utils.network.f5.common import AnsibleF5Parameters
+try:
+    from test.units.compat import unittest
+    from library.module_utils.network.f5.common import AnsibleF5Parameters
+except ImportError:
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat import unittest
+    from ansible_collections.f5networks.f5_modules.plugins.module_utils import AnsibleF5Parameters
 
 
 class TestRegular(unittest.TestCase):

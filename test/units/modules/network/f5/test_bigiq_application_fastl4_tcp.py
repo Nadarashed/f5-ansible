@@ -21,26 +21,17 @@ try:
     from library.modules.bigiq_application_fastl4_tcp import ModuleManager
     from library.modules.bigiq_application_fastl4_tcp import ArgumentSpec
     from library.module_utils.network.f5.common import F5ModuleError
-
-    # In Ansible 2.8, Ansible changed import paths.
     from test.units.compat import unittest
-    from test.units.compat.mock import Mock
-    from test.units.compat.mock import patch
-
+    from test.units.compat.mock import Mock, patch
     from test.units.modules.utils import set_module_args
 except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigiq_application_fastl4_tcp import ModuleParameters
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigiq_application_fastl4_tcp import ModuleManager
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigiq_application_fastl4_tcp import ArgumentSpec
-    from ansible.module_utils.network.f5.common import F5ModuleError
-
-    # Ansible 2.8 imports
-    from units.compat import unittest
-    from units.compat.mock import Mock
-    from units.compat.mock import patch
-
-    from units.modules.utils import set_module_args
-
+    from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import F5ModuleError
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat import unittest
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat.mock import Mock, patch
+    from ansible_collections.f5networks.f5_modules.tests.unit.modules.utils import set_module_args
 
 fixture_path = os.path.join(os.path.dirname(__file__), 'fixtures')
 fixture_data = {}

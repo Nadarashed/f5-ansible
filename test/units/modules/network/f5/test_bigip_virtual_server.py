@@ -21,25 +21,17 @@ try:
     from library.modules.bigip_virtual_server import ApiParameters
     from library.modules.bigip_virtual_server import ModuleManager
     from library.modules.bigip_virtual_server import ArgumentSpec
-
-    # In Ansible 2.8, Ansible changed import paths.
     from test.units.compat import unittest
-    from test.units.compat.mock import Mock
-    from test.units.compat.mock import patch
-
+    from test.units.compat.mock import Mock, patch
     from test.units.modules.utils import set_module_args
 except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_virtual_server import ApiParameters
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_virtual_server import ModuleParameters
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_virtual_server import ModuleManager
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_virtual_server import ArgumentSpec
-
-    # Ansible 2.8 imports
-    from units.compat import unittest
-    from units.compat.mock import Mock
-    from units.compat.mock import patch
-
-    from units.modules.utils import set_module_args
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat import unittest
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat.mock import Mock, patch
+    from ansible_collections.f5networks.f5_modules.tests.unit.modules.utils import set_module_args
 
 
 fixture_path = os.path.join(os.path.dirname(__file__), 'fixtures')

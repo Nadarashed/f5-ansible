@@ -23,13 +23,8 @@ try:
     from library.modules.bigip_snmp_trap import V2Manager
     from library.modules.bigip_snmp_trap import V1Manager
     from library.modules.bigip_snmp_trap import ArgumentSpec
-
-    # In Ansible 2.8, Ansible changed import paths.
     from test.units.compat import unittest
-    from test.units.compat.mock import Mock
-    from test.units.compat.mock import patch
-    from test.units.compat.mock import DEFAULT
-
+    from test.units.compat.mock import Mock, patch, DEFAULT
     from test.units.modules.utils import set_module_args
 except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_snmp_trap import V2Parameters
@@ -38,14 +33,9 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_snmp_trap import V2Manager
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_snmp_trap import V1Manager
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_snmp_trap import ArgumentSpec
-
-    # Ansible 2.8 imports
-    from units.compat import unittest
-    from units.compat.mock import Mock
-    from units.compat.mock import patch
-    from units.compat.mock import DEFAULT
-
-    from units.modules.utils import set_module_args
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat import unittest
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat.mock import Mock, patch, DEFAULT
+    from ansible_collections.f5networks.f5_modules.tests.unit.modules.utils import set_module_args
 
 
 fixture_path = os.path.join(os.path.dirname(__file__), 'fixtures')

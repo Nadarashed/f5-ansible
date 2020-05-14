@@ -23,13 +23,8 @@ try:
     from library.modules.bigip_irule import ArgumentSpec
     from library.modules.bigip_irule import GtmManager
     from library.modules.bigip_irule import LtmManager
-
-    # In Ansible 2.8, Ansible changed import paths.
     from test.units.compat import unittest
-    from test.units.compat.mock import Mock
-    from test.units.compat.mock import patch
-    from test.units.compat.mock import mock_open
-
+    from test.units.compat.mock import Mock, patch, mock_open
     from test.units.modules.utils import set_module_args
 except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_irule import Parameters
@@ -37,14 +32,9 @@ except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_irule import ArgumentSpec
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_irule import GtmManager
     from ansible_collections.f5networks.f5_modules.plugins.modules.bigip_irule import LtmManager
-
-    # Ansible 2.8 imports
-    from units.compat import unittest
-    from units.compat.mock import Mock
-    from units.compat.mock import patch
-    from units.compat.mock import mock_open
-
-    from units.modules.utils import set_module_args
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat import unittest
+    from ansible_collections.f5networks.f5_modules.tests.unit.compat.mock import Mock, patch, mock_open
+    from ansible_collections.f5networks.f5_modules.tests.unit.modules.utils import set_module_args
 
 
 fixture_path = os.path.join(os.path.dirname(__file__), 'fixtures')
