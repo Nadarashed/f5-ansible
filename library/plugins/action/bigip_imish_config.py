@@ -24,16 +24,17 @@ import re
 import time
 import glob
 
-from ansible.plugins.action.network import ActionModule as ActionNetworkModule
 from ansible.module_utils._text import to_text
 from ansible.module_utils.six.moves.urllib.parse import urlsplit
+from ansible_collections.ansible.netcommon.plugins.action.network import ActionModule as ActionNetworkModule
+
+from ansible.utils.display import Display
 
 try:
     from library.module_utils.network.f5.common import f5_provider_spec
 except ImportError:
     from ansible_collections.f5networks.f5_modules.plugins.module_utils.common import f5_provider_spec
 
-from ansible.utils.display import Display
 display = Display()
 
 
